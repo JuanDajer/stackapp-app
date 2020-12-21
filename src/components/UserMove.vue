@@ -31,7 +31,7 @@ export default {
         value: this.value,
       };
       axios
-        .put("http://127.0.0.1:8000/user/movem/", move_in, { headers: {} })
+        .put("https://stackapp-api.herokuapp.com/user/movem/", move_in, { headers: {} })
         .then((result) => {
           alert("Recarga correcta. Nuevo saldo: " + result.data.actual_saldo);
         })

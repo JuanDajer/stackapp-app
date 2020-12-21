@@ -42,7 +42,7 @@ data(){
         processAuthUser: function(){
             
             console.log(this.form)
-            axios.post("http://127.0.0.1:8000/user/auth/", {"username":this.form.username,"password":this.form.password})
+            axios.post("https://stackapp-api.herokuapp.com/user/auth/", {"username":this.form.username,"password":this.form.password})
                 .then((result) => {                   
                     alert("Autenticación Exitosa")
                     this.$emit('log-in',this.form.username)

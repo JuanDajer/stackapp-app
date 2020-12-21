@@ -27,7 +27,7 @@ export default {
   },
   created: function () {
     this.username = localStorage.getItem("current_username");
-    axios.get("http://127.0.0.1:8000/user/balance/" + this.username).then((result) => {
+    axios.get("https://stackapp-api.herokuapp.com/user/balance/" + this.username).then((result) => {
       this.nombre=result.data.nombre;
     });
   },

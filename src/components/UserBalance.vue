@@ -26,7 +26,7 @@ export default {
         else{
             this.username = self;
             console.log(self)
-            axios.get("http://127.0.0.1:8000/user/balance/" + this.username)
+            axios.get("https://stackapp-api.herokuapp.com/user/balance/" + this.username)
                 .then((result) => {
                     this.balance = result.data.balance
 		    this.nombre = result.data.nombre
